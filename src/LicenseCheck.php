@@ -12,6 +12,8 @@ trait LicenseCheck
      */
     private function checkLicenseCodeExists()
     {
+        return; // For now; I need to deploy to a temporary URL and it's not clear whether I can change it later
+        
         // don't even check if it's a console command or unit tests
         if ($this->app->runningInConsole() || $this->app->runningUnitTests()) 
         {
